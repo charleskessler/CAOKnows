@@ -11,11 +11,11 @@ class Item {
     String itemStatus //Active, Pending Discontinued, Discontinued
     Date dateCreated
     Date lastUpdated
-
-    //TODO: add a couple User objects here to keep track of who created, and last updated
+    User createdBy
+    User lastUpdatedBy
 
     static belongsTo = [orderBook:OrderBook]
-    static hasOne = [location:ItemLocation, inventory:ItemInventory, capacity:ItemCapacity, orderHistory:OrderHistory]
+    //static hasOne = [location:ItemLocation, inventory:ItemInventory, capacity:ItemCapacity, orderHistory:OrderHistory, createdBy:User]
 
     static constraints = {
         itemCode nullable:false, blank:false, unique:true, maxSize:12
