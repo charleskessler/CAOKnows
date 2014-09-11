@@ -15,7 +15,7 @@ class Item {
     User lastUpdatedBy
 
     static belongsTo = [orderBook:OrderBook]
-    //static hasOne = [location:ItemLocation, inventory:ItemInventory, capacity:ItemCapacity, orderHistory:OrderHistory, createdBy:User]
+    static hasOne = [location:ItemLocation, inventory:ItemInventory, capacity:ItemCapacity, orderHistory:OrderHistory]
 
     static constraints = {
         itemCode nullable:false, blank:false, unique:true, maxSize:12
