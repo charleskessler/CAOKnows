@@ -65,66 +65,16 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'location', 'error')} ">
-	<label for="location">
-		<g:message code="item.location.label" default="Location" />
-		
-	</label>
-	<g:select id="location" name="location.id" from="${caoknowsv3.ItemLocation.list()}" optionKey="id" value="${itemInstance?.location?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'inventory', 'error')} ">
-	<label for="inventory">
-		<g:message code="item.inventory.label" default="Inventory" />
-		
-	</label>
-	<g:select id="inventory" name="inventory.id" from="${caoknowsv3.ItemInventory.list()}" optionKey="id" value="${itemInstance?.inventory?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'capacity', 'error')} ">
-	<label for="capacity">
-		<g:message code="item.capacity.label" default="Capacity" />
-		
-	</label>
-	<g:select id="capacity" name="capacity.id" from="${caoknowsv3.ItemCapacity.list()}" optionKey="id" value="${itemInstance?.capacity?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'orderHistory', 'error')} ">
-	<label for="orderHistory">
-		<g:message code="item.orderHistory.label" default="Order History" />
-		
-	</label>
-	<g:select id="orderHistory" name="orderHistory.id" from="${caoknowsv3.OrderHistory.list()}" optionKey="id" value="${itemInstance?.orderHistory?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'orderBook', 'error')} required">
 	<label for="orderBook">
 		<g:message code="item.orderBook.label" default="Order Book" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="orderBook" name="orderBook.id" from="${caoknowsv3.OrderBook.list()}" optionKey="id" required="" value="${itemInstance?.orderBook?.id}" class="many-to-one"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'createdBy', 'error')} required">
-	<label for="createdBy">
-		<g:message code="item.createdBy.label" default="Created By" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="createdBy" name="createdBy.id" from="${caoknowsv3.User.list()}" optionKey="id" required="" value="${itemInstance?.createdBy?.id}" class="many-to-one"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'lastUpdatedBy', 'error')} required">
-	<label for="lastUpdatedBy">
-		<g:message code="item.lastUpdatedBy.label" default="Last Updated By" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="lastUpdatedBy" name="lastUpdatedBy.id" from="${caoknowsv3.User.list()}" optionKey="id" required="" value="${itemInstance?.lastUpdatedBy?.id}" class="many-to-one"/>
-
+    <g:if test="${caoknowsv3.OrderBook.findByBookNumber(params.bookNum) == null}">
+        <g:select id="orderBook" name="orderBook.id" from="${caoknowsv3.OrderBook.list()}" optionKey="id" required="" value="${itemInstance?.orderBook?.id}" class="many-to-one"/>
+    </g:if>
+    <g:else>
+        <g:select id="orderBook" name="orderBook.id" from="${caoknowsv3.OrderBook.findByBookNumber(params.bookNum)}" optionKey="id" required="" value="" class="many-to-one"/>
+    </g:else>
 </div>
 

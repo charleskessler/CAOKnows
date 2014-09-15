@@ -35,11 +35,18 @@ class OrderBookController {
             return
         }
 
+        if (orderBookInstance.createdBy == null) {
+            orderBookInstance.createdBy = session.user
+        }
+
+        orderBookInstance.lastUpdatedBy = session.user
+
+
         orderBookInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'orderBookInstance.label', default: 'OrderBook'), orderBookInstance.id])
+                flash.message = message(code: 'default.created.message', args: ["Book", orderBookInstance.bookNumber])
                 redirect orderBookInstance
             }
             '*' { respond orderBookInstance, [status: CREATED] }
@@ -62,11 +69,12 @@ class OrderBookController {
             return
         }
 
+        orderBookInstance.lastUpdatedBy = session.user
         orderBookInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'OrderBook.label', default: 'OrderBook'), orderBookInstance.id])
+                flash.message = message(code: 'default.updated.message', args: ["Book", orderBookInstance.bookNumber])
                 redirect orderBookInstance
             }
             '*' { respond orderBookInstance, [status: OK] }
@@ -85,7 +93,7 @@ class OrderBookController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'OrderBook.label', default: 'OrderBook'), orderBookInstance.id])
+                flash.message = message(code: 'default.deleted.message', args: ["Book", orderBookInstance.bookNumber])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NO_CONTENT }

@@ -1,16 +1,6 @@
 <%@ page import="caoknowsv3.ItemLocation" %>
 
 
-
-<div class="fieldcontain ${hasErrors(bean: itemLocationInstance, field: 'item', 'error')} required">
-	<label for="item">
-		<g:message code="itemLocation.item.label" default="Item" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="item" name="item.id" from="${caoknowsv3.Item.list()}" optionKey="id" required="" value="${itemLocationInstance?.item?.id}" class="many-to-one"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: itemLocationInstance, field: 'aisle', 'error')} ">
 	<label for="aisle">
 		<g:message code="itemLocation.aisle.label" default="Aisle" />
@@ -56,12 +46,4 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: itemLocationInstance, field: 'lastUpdatedBy', 'error')} ">
-	<label for="lastUpdatedBy">
-		<g:message code="itemLocation.lastUpdatedBy.label" default="Last Updated By" />
-		
-	</label>
-	<g:select id="lastUpdatedBy" name="lastUpdatedBy.id" from="${caoknowsv3.User.list()}" optionKey="id" value="${itemLocationInstance?.lastUpdatedBy?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
 

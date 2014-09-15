@@ -14,8 +14,17 @@ class Item {
     User createdBy
     User lastUpdatedBy
 
+    static searchable = true
+
     static belongsTo = [orderBook:OrderBook]
     static hasOne = [location:ItemLocation, inventory:ItemInventory, capacity:ItemCapacity, orderHistory:OrderHistory]
+
+    String toString() {
+        if(unitSize == null || unitType == null)
+            return "$itemCode -- $description"
+        else
+            return "$itemCode -- $description ($unitSize $unitType)"
+    }
 
     static constraints = {
         itemCode nullable:false, blank:false, unique:true, maxSize:12
@@ -32,6 +41,8 @@ class Item {
         lastUpdated nullable:true
         orderHistory nullable:true
         orderBook nullable:false
+        createdBy nullable:true
+        lastUpdatedBy nullable:true
     }
 
     static mapping = {

@@ -35,11 +35,12 @@ class ItemInventoryController {
             return
         }
 
+        itemInventoryInstance.lastUpdatedBy = session.user
         itemInventoryInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'itemInventoryInstance.label', default: 'ItemInventory'), itemInventoryInstance.id])
+                flash.message = message(code: 'default.created.message', args: [message(code: 'itemInventoryInstance.label', default: 'Item Inventory'), itemInventoryInstance.id])
                 redirect itemInventoryInstance
             }
             '*' { respond itemInventoryInstance, [status: CREATED] }
@@ -61,12 +62,12 @@ class ItemInventoryController {
             respond itemInventoryInstance.errors, view: 'edit'
             return
         }
-
+        itemInventoryInstance.lastUpdatedBy = session.user
         itemInventoryInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'ItemInventory.label', default: 'ItemInventory'), itemInventoryInstance.id])
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'ItemInventory.label', default: 'Item Inventory'), itemInventoryInstance.id])
                 redirect itemInventoryInstance
             }
             '*' { respond itemInventoryInstance, [status: OK] }
@@ -85,7 +86,7 @@ class ItemInventoryController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'ItemInventory.label', default: 'ItemInventory'), itemInventoryInstance.id])
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'ItemInventory.label', default: 'Item Inventory'), itemInventoryInstance.id])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NO_CONTENT }
@@ -95,7 +96,7 @@ class ItemInventoryController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'itemInventoryInstance.label', default: 'ItemInventory'), params.id])
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'itemInventoryInstance.label', default: 'Item Inventory'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NOT_FOUND }

@@ -35,11 +35,14 @@ class ItemLocationController {
             return
         }
 
+        itemLocationInstance.lastUpdatedBy = session.user
+
+
         itemLocationInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'itemLocationInstance.label', default: 'ItemLocation'), itemLocationInstance.id])
+                flash.message = message(code: 'default.created.message', args: [message(code: 'itemLocationInstance.label', default: 'Item Location'), itemLocationInstance.id])
                 redirect itemLocationInstance
             }
             '*' { respond itemLocationInstance, [status: CREATED] }
@@ -62,11 +65,13 @@ class ItemLocationController {
             return
         }
 
+        itemLocationInstance.lastUpdatedBy = session.user
+
         itemLocationInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'ItemLocation.label', default: 'ItemLocation'), itemLocationInstance.id])
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'ItemLocation.label', default: 'Item Location'), itemLocationInstance.id])
                 redirect itemLocationInstance
             }
             '*' { respond itemLocationInstance, [status: OK] }
@@ -85,7 +90,7 @@ class ItemLocationController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'ItemLocation.label', default: 'ItemLocation'), itemLocationInstance.id])
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'ItemLocation.label', default: 'Item Location'), itemLocationInstance.id])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NO_CONTENT }
@@ -95,7 +100,7 @@ class ItemLocationController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'itemLocationInstance.label', default: 'ItemLocation'), params.id])
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'itemLocationInstance.label', default: 'Item Location'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*' { render status: NOT_FOUND }

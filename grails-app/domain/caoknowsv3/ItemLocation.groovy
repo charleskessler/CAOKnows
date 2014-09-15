@@ -13,7 +13,7 @@ class ItemLocation {
     static belongsTo = [item:Item]
 
     String toString() {
-        "Aisle: $aisle"
+        "Aisle $aisle"
     }
 
     static constraints = {

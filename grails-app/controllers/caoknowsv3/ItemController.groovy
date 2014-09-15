@@ -12,7 +12,21 @@ class ItemController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Item.list(params), model:[itemInstanceCount: Item.count()]
+
+        def list
+        def count
+
+        if(params.bookNum) {
+            def book = OrderBook.findByBookNumber(params.bookNum)
+            list = Item.findAllByOrderBook(book)
+            count = Item.countByOrderBook(book)
+        }
+        else {
+            list = Item.list(params)
+            count = Item.count()
+        }
+        [itemInstanceList:list, itemInstanceCount: count, bookNum:params.bookNum]
+          //respond Item.list(params), model:[itemInstanceCount: Item.count()]
     }
 
     def show(Item itemInstance) {
@@ -57,6 +71,12 @@ class ItemController {
                     lastReceivedDate: new Date(),
                     item: itemInstance)
         }
+        if (itemInstance.createdBy == null) {
+            itemInstance.createdBy = session.user
+        }
+
+        itemInstance.lastUpdatedBy = session.user
+
 
 
         itemInstance.save flush:true
@@ -86,6 +106,7 @@ class ItemController {
             return
         }
 
+        itemInstance.lastUpdatedBy = session.user
         itemInstance.save flush:true
 
         request.withFormat {
@@ -123,6 +144,23 @@ class ItemController {
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
+        }
+    }
+
+    def search = {
+        if(params.query) {
+            def items = Item.search(params.query).results
+            [items:items]
+            /*
+            println(items.size())
+            if(items.size() == 1) { //only 1 item returned, go right to it
+                def item = items[0]
+                def id = ((Item)item).id
+                redirect(controller:"item", action:"show", id:id)
+            }
+            else {
+                [items:items]
+            }*/
         }
     }
 }

@@ -4,20 +4,18 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'itemLocation.label', default: 'ItemLocation')}" />
-		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		<g:set var="entityName" value="${message(code: 'itemLocation.label', default: 'Item Location')}" />
+		<title>Item Location</title>
 	</head>
 	<body>
 		<a href="#show-itemLocation" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-itemLocation" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
+			<h1>Item Location</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -76,12 +74,16 @@
 					
 				</li>
 				</g:if>
-			
+
+            </ol>
+
+            <h1>Edit History</h1>
+            <ol class="property-list item">
 				<g:if test="${itemLocationInstance?.lastUpdatedBy}">
 				<li class="fieldcontain">
 					<span id="lastUpdatedBy-label" class="property-label"><g:message code="itemLocation.lastUpdatedBy.label" default="Last Updated By" /></span>
 					
-						<span class="property-value" aria-labelledby="lastUpdatedBy-label"><g:link controller="user" action="show" id="${itemLocationInstance?.lastUpdatedBy?.id}">${itemLocationInstance?.lastUpdatedBy?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="lastUpdatedBy-label">${itemLocationInstance?.lastUpdatedBy?.encodeAsHTML()}</span>
 					
 				</li>
 				</g:if>
@@ -95,12 +97,12 @@
 				</li>
 				</g:if>
 			
-			</ol>
+            </ol>
+
 			<g:form url="[resource:itemLocationInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
 					<g:link class="edit" action="edit" resource="${itemLocationInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
+					</fieldset>
 			</g:form>
 		</div>
 	</body>
