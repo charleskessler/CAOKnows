@@ -102,9 +102,10 @@ class UserController {
         }
     }
 
+    //1.0 -- Login
     def login() {
-        if(params.cName)
-            return [cName:params.cName, aName:params.aName]
+        if(params.className)
+            return [className:params.className, actionName:params.actionName]
     }
 
     def logout() {
@@ -112,19 +113,28 @@ class UserController {
         redirect controller:'User', action:'login'
     }
 
+    //1.2 -- Validate username and password
     def validate() {
+        println("username param = " + params.username)
         def user = User.findByUserName(params.username)
+
+        println("user instance=" + user)
 
         if(user && user.password == params.password) {
             session.user = user
 
-            if(params.cName)
-                redirect controller:params.cName, action:params.aName
-            else
+            if(params.className) {
+                redirect controller:params.className, action:params.actionName
+                return
+            }
+            else {
                 redirect(uri:'/')
+                return
+            }
         } else {
             flash.message = "Invalid username and password."
             render view:'login'
+            return
         }
 
     }
