@@ -9,13 +9,25 @@ class CAOKnowsV3TagLib {
             out << "Welcome ${session.user}."
             out << "</span><span style='float:right;margin-right:15px'>"
             out << "<a href='${createLink(controller:'User', action:'logout')}'>"
-            out << "Logout </a></span>"
+            out << "Logout</a>"
+            out << "|| <a href='${createLink(controller:'accountSettings', action:'index')}'>"
+            out << "Change Password</a></span>"
         } else{
             out << "<span style='float:right;margin-right:10px'>"
             out << "<a href='${createLink(controller:'User', action:'login')}'>"
             out << "Login </a></span>"
         }
         out << "</div><br/>"
+    }
+
+    def isManager = { attrs, body ->
+        if(session.user.rights == "Manager")
+            out << body()
+    }
+
+    def isClerk = { attrs, body ->
+        if(session.user.rights == "Clerk")
+            out << body()
     }
 
 }

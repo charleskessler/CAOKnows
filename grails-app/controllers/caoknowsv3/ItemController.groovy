@@ -1,6 +1,6 @@
 package caoknowsv3
 
-
+import grails.gorm.PagedResultList
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -18,15 +18,16 @@ class ItemController {
 
         if(params.bookNum) {
             def book = OrderBook.findByBookNumber(params.bookNum)
-            list = Item.findAllByOrderBook(book)
+            list = Item.findAllByOrderBook(book, params)
             count = Item.countByOrderBook(book)
         }
         else {
             list = Item.list(params)
             count = Item.count()
         }
-        [itemInstanceList:list, itemInstanceCount: count, bookNum:params.bookNum]
-          //respond Item.list(params), model:[itemInstanceCount: Item.count()]
+
+        [itemInstanceList:list, itemInstanceCount:count, bookNum:params.bookNum]
+        //respond Item.list(max:10, fetch:[bookNumber]), model:[itemInstanceCount: Item.countByOrderBook(book)]
     }
 
     def show(Item itemInstance) {
@@ -34,6 +35,7 @@ class ItemController {
     }
 
     def create() {
+        println("NEW ITEM CREATED: " + params)
         respond new Item(params)
     }
 
@@ -56,11 +58,11 @@ class ItemController {
         }
         if(itemInstance.inventory == null) {
             itemInstance.inventory = new ItemInventory(item:itemInstance,
-                    shelf:0, backroom:0, mezzanine:0)
+                    shelf:0, backroom:0, mezzanine:0, minimumLevel:0)
         }
         if(itemInstance.capacity == null) {
             itemInstance.capacity = new ItemCapacity(item:itemInstance,
-                    facings:0, depth:0, height:0, secondary:0)
+                    facings:0, depth:0, height:1, secondary:0)
         }
         if(itemInstance.orderHistory == null) {
             itemInstance.orderHistory = new OrderHistory(pendingDeliveryQuantity: 0,

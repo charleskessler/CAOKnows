@@ -1,4 +1,4 @@
-import caoknowsv3.User
+import caoknowsv3.*
 
 class BootStrap {
 

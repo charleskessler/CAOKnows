@@ -28,3 +28,12 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: itemInventoryInstance, field: 'minimumLevel', 'error')} ">
+    <label for="minimumLevel">
+        <g:message code="itemInventory.minimumLevel.label" default="Minimum Presentation" />
+
+    </label>
+    <g:field name="minimumLevel" type="number" value="${itemInventoryInstance.minimumLevel}"/>
+
+</div>
+

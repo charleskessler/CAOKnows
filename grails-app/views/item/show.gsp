@@ -13,6 +13,9 @@
     <ul>
         <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index" params='["bookNum":"${itemInstance.orderBook.bookNumber}"]'>Item List</g:link></li>
+        <g:isManager>
+            <li><g:link class="create" action="create" params='["bookNum":"${itemInstance.orderBook.bookNumber}"]'>New Item</g:link></li>
+        </g:isManager>
     </ul>
 </div>
 <div id="show-item" class="content scaffold-show" role="main">
@@ -166,12 +169,14 @@
         </g:if>
 
     </ol>
-    <g:form url="[resource:itemInstance, action:'delete']" method="DELETE">
-        <fieldset class="buttons">
-            <g:link class="edit" action="edit" resource="${itemInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-            <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-        </fieldset>
-    </g:form>
+    <g:isManager>
+        <g:form url="[resource:itemInstance, action:'delete']" method="DELETE">
+            <fieldset class="buttons">
+                <g:link class="edit" action="edit" resource="${itemInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+            </fieldset>
+        </g:form>
+    </g:isManager>
 </div>
 </body>
 </html>

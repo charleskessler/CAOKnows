@@ -98,12 +98,13 @@
 				</g:if>
 			
             </ol>
-
-			<g:form url="[resource:itemLocationInstance, action:'delete']" method="DELETE">
-				<fieldset class="buttons">
-					<g:link class="edit" action="edit" resource="${itemLocationInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					</fieldset>
-			</g:form>
+            <g:isManager>
+                <g:form url="[resource:itemLocationInstance, action:'delete']" method="DELETE">
+                    <fieldset class="buttons">
+                        <g:link class="edit" action="edit" resource="${itemLocationInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                        </fieldset>
+                </g:form>
+            </g:isManager>
 		</div>
 	</body>
 </html>

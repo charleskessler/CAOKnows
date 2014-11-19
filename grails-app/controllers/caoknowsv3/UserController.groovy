@@ -122,7 +122,6 @@ class UserController {
 
         if(user && user.password == params.password) {
             session.user = user
-
             if(params.className) {
                 redirect controller:params.className, action:params.actionName
                 return

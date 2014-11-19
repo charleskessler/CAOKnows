@@ -48,6 +48,13 @@
 						<span class="property-value" aria-labelledby="mezzanine-label"><g:fieldValue bean="${itemInventoryInstance}" field="mezzanine"/></span>
 					
 				</li>
+
+                <li class="fieldcontain">
+                    <span id="minlevel-label" class="property-label"><g:message code="itemInventory.minimumLevel.label" default="Minimum Level" /></span>
+
+                    <span class="property-value" aria-labelledby="minlevel-label"><g:fieldValue bean="${itemInventoryInstance}" field="minimumLevel"/></span>
+
+                </li>
             </ol>
 
             <h1>Edit History</h1>

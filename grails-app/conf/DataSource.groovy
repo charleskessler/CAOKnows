@@ -17,8 +17,22 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            username = "vice"
+            password = "rofl123OK"
+            pooled = true
+            dbCreate = "update"
+            driverClassName = "com.mysql.jdbc.Driver"
+            url = "jdbc:mysql://aa1uum1ycsydhfl.copfmhpsfcnb.us-east-1.rds.amazonaws.com/ebdb?user=vice&password=rofl123OK"
+            dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+            properties {
+                validationQuery = "SELECT 1"
+                testOnBorrow = true
+                testOnReturn = true
+                testWhileIdle = true
+                timeBetweenEvictionRunsMillis = 1800000
+                numTestsPerEvictionRun = 3
+                minEvictableIdleTimeMillis = 1800000
+            }
         }
     }
     test {
@@ -29,6 +43,7 @@ environments {
     }
     production {
         dataSource {
+            //sg-d15a79b4
             username = "vice"
             password = "rofl123OK"
             pooled = true

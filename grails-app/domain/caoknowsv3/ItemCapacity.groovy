@@ -15,6 +15,11 @@ class ItemCapacity {
         "${(facings * (depth * height)) + secondary}"
     }
 
+    int shelfCapacity() {
+        return facings * (depth * height) + secondary
+    }
+
+
     static constraints = {
         item nullable:false
         facings nullable:true, min:0

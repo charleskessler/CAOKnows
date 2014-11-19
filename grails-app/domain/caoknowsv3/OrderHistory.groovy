@@ -13,6 +13,9 @@ class OrderHistory {
 
     static belongsTo = [item:Item]
 
+    String toString() {
+        return lastOrderQuantity
+    }
     static constraints = {
         pendingDeliveryQuantity min:0, nullable:false
         lastOrderQuantity min:0, nullable:false
