@@ -1,4 +1,6 @@
-
+<%--
+Module 1.1 -- Enter username and password
+--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>

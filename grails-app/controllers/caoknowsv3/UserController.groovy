@@ -102,7 +102,7 @@ class UserController {
         }
     }
 
-    //1.0 -- Login
+    //Module 1.0 -- Login
     def login() {
         if(params.className)
             return [className:params.className, actionName:params.actionName]
@@ -113,12 +113,10 @@ class UserController {
         redirect controller:'User', action:'login'
     }
 
-    //1.2 -- Validate username and password
+    //Module 1.2 -- Validate username and password
     def validate() {
-        println("username param = " + params.username)
-        def user = User.findByUserName(params.username)
 
-        println("user instance=" + user)
+        def user = User.findByUserName(params.username)
 
         if(user && user.password == params.password) {
             session.user = user
@@ -130,11 +128,14 @@ class UserController {
                 redirect(uri:'/')
                 return
             }
-        } else {
-            flash.message = "Invalid username and password."
+        } else if (!user) {
+            flash.message = "Invalid username."
+            render view:'login'
+            return
+        } else if (user.password != params.password) {
+            flash.message = "Invalid password."
             render view:'login'
             return
         }
-
     }
 }

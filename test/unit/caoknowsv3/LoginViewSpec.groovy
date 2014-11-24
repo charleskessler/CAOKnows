@@ -8,3 +8,4 @@ import spock.lang.Specification
 class LoginViewSpec extends Specification {
 
 }
+

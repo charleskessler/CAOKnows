@@ -39,18 +39,33 @@ class UserControllerSpec extends Specification {
             returnedParams.actionName == 'someActionName'
     }
 
-    void "Unit Test 1.2-1 -- Invalid Username and Password"() {
 
-        when: "the username and password entered are blank"
+    void "Unit Test 1.2-1 -- Invalid Username" () {
+
+        when: "the username entered is not in the user database"
             params.username = ''
             params.password = ''
             controller.validate()
 
-        then: "the validation action renders login view with errors"
-            controller.flash.message == 'Invalid username and password.'
+        then: "the validation action renders login view with Invalid Login error message"
+            controller.flash.message == 'Invalid username.'
     }
 
-    void "Unit Test 1.2-2 -- no redirection parameters"() {
+    void "Unit Test 1.2-2 -- Invalid Password" () {
+
+        when: "the username is in the user database, but the password entered is invalid"
+            User testUser = new User(userName:'PasswordTestUser', password:'RightPassword')
+            testUser.id = 1
+            testUser.save(flush:true, failOnError:true, validate:false)
+            params.username = 'PasswordTestUser'
+            params.password = 'WrongPassword'
+            controller.validate()
+
+        then: "the validation action renders login view with Invalid Password error message"
+            controller.flash.message == 'Invalid password.'
+    }
+
+    void "Unit Test 1.2-3 -- no redirection parameters"() {
 
         when: "the username and password entered are correct, and *no* redirection parameters"
             User testUser = new User(userName:'test', password:'test')
@@ -64,7 +79,7 @@ class UserControllerSpec extends Specification {
             response.redirectedUrl == '/'
     }
 
-    void "Unit Test 1.2-3 -- redirection parameters"() {
+    void "Unit Test 1.2-4 -- redirection parameters"() {
 
         when: "the username and password entered are correct, and there are redirection parameters"
             User testUser = new User(userName:'test', password:'test')
@@ -80,11 +95,19 @@ class UserControllerSpec extends Specification {
             response.redirectedUrl == '/someClassName/someActionName'
     }
 
-    void "Unit Test 22.0-1 -- Redirects to Login page"() {
+    void "Unit Test 29.0-1 -- Redirects to Login page"() {
+
         when: "User clicks on Logout link"
             controller.logout()
         then: "the logout action redirects to /User/Login"
             response.redirectedUrl == '/user/login'
+    }
+
+    void "Unit Test 29.0-2 -- User is logged out"() {
+        when: "User clicks on Logout link"
+            controller.logout()
+        then: "the user session is ended"
+            session.user == null
     }
 
 /*

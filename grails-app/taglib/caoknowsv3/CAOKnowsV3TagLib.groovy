@@ -1,5 +1,5 @@
 package caoknowsv3
-
+import static org.springframework.http.HttpStatus.*
 class CAOKnowsV3TagLib {
 
     def loginToggle = {
@@ -12,7 +12,7 @@ class CAOKnowsV3TagLib {
             out << "Logout</a>"
             out << "|| <a href='${createLink(controller:'accountSettings', action:'index')}'>"
             out << "Change Password</a></span>"
-        } else{
+        } else {
             out << "<span style='float:right;margin-right:10px'>"
             out << "<a href='${createLink(controller:'User', action:'login')}'>"
             out << "Login </a></span>"
@@ -21,13 +21,12 @@ class CAOKnowsV3TagLib {
     }
 
     def isManager = { attrs, body ->
-        if(session.user.rights == "Manager")
+        if(session.user) {
+            if(session.user.rights == "Manager") {
             out << body()
+            }
+        }
     }
 
-    def isClerk = { attrs, body ->
-        if(session.user.rights == "Clerk")
-            out << body()
-    }
 
 }

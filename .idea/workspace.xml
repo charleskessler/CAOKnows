@@ -1,40 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10b6d727-a54a-4399-8bd7-08ccfd716060" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/generateOrder/OrderReview.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/generateOrder/OrderView.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/accountSettings/Settings.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/generateOrder/index.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/JQueryTest/jquerytest.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+    <list default="true" id="10b6d727-a54a-4399-8bd7-08ccfd716060" name="Default" comment="Initial commit&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/images/CAOKnowsLogo3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/images/CAOKnowsLogo4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/DashboardController.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/caoknowsv3/DashboardControllerSpec.groovy" />
+      <change type="MOVED" beforePath="C:\Users\vice\IdeaProjects\CAOKnowsV3\grails-app\views\index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/dashboard/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/taglib/caoknowsv3/CAOKnowsV3TagLib.groovy" afterPath="$PROJECT_DIR$/grails-app/taglib/caoknowsv3/CAOKnowsV3TagLib.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/caoknowsv3/ItemCapacity.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/caoknowsv3/ItemCapacity.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/caoknowsv3/ItemInventory.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/caoknowsv3/ItemInventory.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/reports/List.gsp" afterPath="$PROJECT_DIR$/grails-app/views/reports/List.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/caoknowsv3/OrderHistory.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/caoknowsv3/OrderHistory.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/GenerateOrderController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/GenerateOrderController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/caoknowsv3/GenerateOrderControllerSpec.groovy" afterPath="$PROJECT_DIR$/test/unit/caoknowsv3/GenerateOrderControllerSpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/caoknowsv3/LoginViewSpec.groovy" afterPath="$PROJECT_DIR$/test/unit/caoknowsv3/LoginViewSpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/generateOrder/OrderReview.gsp" afterPath="$PROJECT_DIR$/grails-app/views/generateOrder/OrderReview.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/UserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/UserController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/itemInventory/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/itemInventory/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/item/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/item/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/orderBook/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/orderBook/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/item/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/item/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/itemCapacity/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/itemCapacity/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/itemInventory/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/itemInventory/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/itemLocation/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/itemLocation/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/orderBook/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/orderBook/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/caoknowsv3/UserControllerSpec.groovy" afterPath="$PROJECT_DIR$/test/unit/caoknowsv3/UserControllerSpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/generateOrder/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/generateOrder/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/user/login.gsp" afterPath="$PROJECT_DIR$/grails-app/views/user/login.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
-    <list id="a6e00c9b-bebe-4af8-aea3-403c6a5f0a7b" name="Rejected commit: Default" comment="Initial commit&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemCapacityController.groovy" />
     </list>
     <ignored path="CAOKnowsV3.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemCapacityController.groovy" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,101 +81,45 @@
     <favorites_list name="CAOKnowsV3" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/orderBook/index.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="588" selection-end="772" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="952">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenerateOrderController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/GenerateOrderController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="23" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1190">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/orderBook/show.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="77" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1819">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Item.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/caoknowsv3/Item.groovy">
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="70" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="969">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderView.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/generateOrder/OrderView.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="106" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1139">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/item/edit.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="11" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="782">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.gsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/item/_form.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="8" selection-start="2728" selection-end="2728" vertical-scroll-proportion="1.2682927" vertical-offset="617" max-vertical-offset="1462">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/item/index.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="30" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1479">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderReview.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/generateOrder/OrderReview.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="1192" selection-end="1307" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1207">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSource.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="25" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1207">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.7950413">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="index.gsp" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/grails-app/views/generateOrder/index.gsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="3" column="41" selection-start="78" selection-end="78" vertical-scroll-proportion="-0.41666666" vertical-offset="311" max-vertical-offset="935">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GenerateOrderControllerSpec.groovy" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/GenerateOrderControllerSpec.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="23" column="44" selection-start="594" selection-end="594" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="748">
+                  <folding>
+                    <element signature="e#20#52#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/grails-app/views/dashboard/index.gsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="3" column="15" selection-start="49" selection-end="49" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="918">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -201,11 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/itemLocation/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemInventoryController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/itemInventory/edit.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/itemCapacity/edit.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/itemCapacity/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemCapacityController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/caoknowsv3/Item.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/itemSearch.gsp" />
@@ -214,11 +140,9 @@
         <option value="$PROJECT_DIR$/test/unit/caoknowsv3/ItemSpec.groovy" />
         <option value="$PROJECT_DIR$/test/unit/caoknowsv3/ItemControllerSpec.groovy" />
         <option value="$PROJECT_DIR$/test/unit/caoknowsv3/UserSpec.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/caoknowsv3/LoginViewSpec.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/Order.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/caoknowsv3/OrderHistory.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/generateOrder/Order.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/generateOrder/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/caoknowsv3/ItemCapacity.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/jquerytest.gsp" />
@@ -228,30 +152,37 @@
         <option value="$PROJECT_DIR$/grails-app/views/itemInventory/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/itemInventory/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/caoknowsv3/ItemInventory.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/caoknowsv3/GenerateOrderControllerSpec.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/caoknowsv3/UserControllerSpec.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/generateOrder/OrderReview.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/reports/Reports.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ReportsController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/reports/List.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/user/login.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/UserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/AccountSettingsController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/accountSettings/Settings.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
         <option value="$PROJECT_DIR$/web-app/css/main.css" />
-        <option value="$PROJECT_DIR$/grails-app/taglib/caoknowsv3/CAOKnowsV3TagLib.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/item/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/item/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/itemCapacity/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/itemLocation/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/orderBook/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/GenerateOrderController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/orderBook/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/generateOrder/OrderView.gsp" />
+        <option value="$PROJECT_DIR$/test/unit/caoknowsv3/UserControllerSpec.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/caoknowsv3/LoginViewSpec.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/user/twat.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/user/login.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/UserController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/generateOrder/OrderReview.gsp" />
+        <option value="$PROJECT_DIR$/test/unit/caoknowsv3/GenerateOrderControllerSpec.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/generateOrder/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/GenerateOrderController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/taglib/caoknowsv3/CAOKnowsV3TagLib.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/IndexController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/caoknowsv3/DashboardController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/caoknowsv3/SecurityFilters.groovy" />
       </list>
     </option>
   </component>
@@ -288,7 +219,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -335,7 +265,97 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caoknowsv3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="integration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caoknowsv3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -573,6 +593,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="accountSettings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -693,12 +735,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAOKnowsV3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="caoknowsv3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -714,17 +779,17 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="SearchEverywhereHistory" value="&lt;" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TekDays2/grails-app/controllers/tekdays2/TekEventController.groovy" />
+    <property name="SearchEverywhereHistory" value=":'&#10;&lt;" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/grails-app/views/dashboard" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vice\IdeaProjects\CAOKnowsV3\grails-app\views\dashboard" />
       <recent name="C:\Users\vice\IdeaProjects\CAOKnowsV3\grails-app\views\JQueryTest" />
       <recent name="C:\Users\vice\IdeaProjects\CAOKnowsV3\grails-app\views\generateOrder" />
       <recent name="C:\Users\vice\IdeaProjects\CAOKnowsV3\grails-app\views" />
       <recent name="C:\Users\vice\IdeaProjects\CAOKnowsV3\grails-app\views\order" />
-      <recent name="C:\Users\vice\IdeaProjects\CAOKnowsV3\grails-app\views\item" />
     </key>
   </component>
   <component name="RunManager" selected="Grails.Grails:CAOKnowsV3">
@@ -927,7 +992,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998884" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -935,20 +1001,19 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39910814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2802198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2832723" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32552955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998884" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -958,25 +1023,25 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26190478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32887402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2832723" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32552955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39910814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998884" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -995,9 +1060,10 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Initial commit&#10;" />
     <MESSAGE value="Added Reports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Reports" />
+    <MESSAGE value="RC 1&#10;" />
+    <MESSAGE value="Initial commit&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1007,112 +1073,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/JQueryTest/jquerytest.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="140" selection-end="326" vertical-scroll-proportion="0.16129032" vertical-offset="0" max-vertical-offset="527" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/JQueryTestController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="31" selection-start="100" selection-end="100" vertical-scroll-proportion="0.18444847" vertical-offset="0" max-vertical-offset="553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/caoknowsv3/OrderHistory.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="26" selection-end="26" vertical-scroll-proportion="0.06403013" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemInventoryController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="42" selection-start="348" selection-end="374" vertical-scroll-proportion="0.40699816" vertical-offset="0" max-vertical-offset="1870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/itemInventory/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="80" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.90135396" vertical-offset="452" max-vertical-offset="1598" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/itemInventory/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/itemInventory/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="699" selection-end="1733" vertical-scroll-proportion="0.19729207" vertical-offset="170" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/itemInventory/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/itemInventory/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="-10.061225" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/UserControllerSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="2831" selection-end="3081" vertical-scroll-proportion="1.4291846" vertical-offset="1044" max-vertical-offset="3893" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemLocationController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="153" selection-end="153" vertical-scroll-proportion="0.73913044" vertical-offset="136" max-vertical-offset="1938">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/caoknowsv3/ItemCapacity.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="26" selection-start="401" selection-end="401" vertical-scroll-proportion="-4.6041665" vertical-offset="153" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/GenerateOrderControllerSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="63" selection-start="683" selection-end="683" vertical-scroll-proportion="-9.608696" vertical-offset="153" max-vertical-offset="544" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/item/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.877551" vertical-offset="239" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/grails-2.3.7/dist/grails-plugin-gsp-2.3.7-sources.jar!/org/codehaus/groovy/grails/plugins/web/taglib/RenderTagLib.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="503" column="13" selection-start="20604" selection-end="20604" vertical-scroll-proportion="0.33211008" vertical-offset="7707" max-vertical-offset="10421" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/generateOrder/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="25" selection-start="657" selection-end="657" vertical-scroll-proportion="0.06769826" vertical-offset="254" max-vertical-offset="901" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TekDays2/grails-app/controllers/tekdays2/TekEventController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="379" selection-end="379" vertical-scroll-proportion="0.42123893" vertical-offset="0" max-vertical-offset="1887" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/reports/Reports.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="67" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.7712665" vertical-offset="255" max-vertical-offset="833" />
@@ -1127,19 +1087,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="8" selection-start="708" selection-end="780" vertical-scroll-proportion="43.869564" vertical-offset="1485" max-vertical-offset="2958">
           <folding>
-            <element signature="e#20#54#0" expanded="true" />
+            <element signature="e#20#54#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/caoknowsv3/ItemInventory.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="299" selection-end="299" vertical-scroll-proportion="0.4811321" vertical-offset="0" max-vertical-offset="816">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ReportsController.groovy">
@@ -1147,11 +1107,6 @@
         <state line="39" column="23" selection-start="1161" selection-end="1174" vertical-scroll-proportion="2.6205533" vertical-offset="0" max-vertical-offset="1530">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/login.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="222" selection-end="320" vertical-scroll-proportion="-1.3877552" vertical-offset="102" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/AccountSettingsController.groovy">
@@ -1167,42 +1122,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/caoknowsv3/User.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="6" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.26877472" vertical-offset="102" max-vertical-offset="408">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/caoknowsv3/SecurityFilters.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="61" selection-start="325" selection-end="335" vertical-scroll-proportion="0.35172415" vertical-offset="0" max-vertical-offset="580" />
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-app/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="244" column="12" selection-start="4544" selection-end="4544" vertical-scroll-proportion="-0.3736462" vertical-offset="4355" max-vertical-offset="10234" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.767148" vertical-offset="255" max-vertical-offset="952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/UserController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="40" selection-start="3264" selection-end="3264" vertical-scroll-proportion="0.36086175" vertical-offset="1822" max-vertical-offset="2465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/taglib/caoknowsv3/CAOKnowsV3TagLib.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="25" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.85" vertical-offset="0" max-vertical-offset="663">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/itemCapacity/index.gsp">
@@ -1217,12 +1148,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/itemCapacity/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="26" selection-start="3972" selection-end="3972" vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="1598" />
+        <state line="84" column="26" selection-start="3972" selection-end="3972" vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="1598">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/itemLocation/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="26" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.0" vertical-offset="1802" max-vertical-offset="1972" />
+        <state line="106" column="26" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.0" vertical-offset="1802" max-vertical-offset="1972">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
@@ -1238,18 +1173,6 @@
     <entry file="file://$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="3" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.0" vertical-offset="1601" max-vertical-offset="2159" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/GenerateOrderController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="23" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1190">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/orderBook/index.gsp">
@@ -1278,28 +1201,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="25" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/caoknowsv3/Item.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="70" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="969">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/generateOrder/OrderReview.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="1192" selection-end="1307" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1207">
-          <folding />
-        </state>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/generateOrder/OrderView.gsp">
@@ -1318,7 +1227,200 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/item/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="8" selection-start="2728" selection-end="2728" vertical-scroll-proportion="1.2682927" vertical-offset="617" max-vertical-offset="1462">
+        <state line="73" column="8" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.0" vertical-offset="617" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/ItemCapacityController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="51" selection-start="2344" selection-end="2344" vertical-scroll-proportion="-36.869564" vertical-offset="461" max-vertical-offset="1887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/JQueryTestControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="227" selection-end="227" vertical-scroll-proportion="-5.9130435" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/OrderHistoryControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="129" selection-end="129" vertical-scroll-proportion="-5.9130435" vertical-offset="0" max-vertical-offset="2618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/ReportsControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="224" selection-end="224" vertical-scroll-proportion="-5.9130435" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/OrderBookSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="220" selection-end="220" vertical-scroll-proportion="-5.9130435" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/OrderBookControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="404" selection-end="593" vertical-scroll-proportion="-12.565217" vertical-offset="0" max-vertical-offset="2618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/AccountSettingsControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="232" selection-end="232" vertical-scroll-proportion="-5.9130435" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/CAOKnowsV3TagLibSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/UserSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="215" selection-end="215" vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/SecurityFiltersSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="112" selection-end="112" vertical-scroll-proportion="0.09758898" vertical-offset="0" max-vertical-offset="871">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/LoginViewSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.11710677" vertical-offset="0" max-vertical-offset="871">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/ItemSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="215" selection-end="215" vertical-scroll-proportion="0.16037735" vertical-offset="0" max-vertical-offset="848">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/login.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="41" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/UserControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="13" selection-start="3778" selection-end="3778" vertical-scroll-proportion="2.17484" vertical-offset="765" max-vertical-offset="4284">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/generateOrder/OrderReview.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="37" selection-start="42" selection-end="42" vertical-scroll-proportion="-0.3469388" vertical-offset="0" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="3" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.23434344" vertical-offset="1601" max-vertical-offset="2159">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="25" selection-start="1616" selection-end="1616" vertical-scroll-proportion="2.3333333" vertical-offset="508" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/GenerateOrderController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="22" selection-start="2143" selection-end="2143" vertical-scroll-proportion="-24.130434" vertical-offset="482" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/taglib/caoknowsv3/CAOKnowsV3TagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/dashboard/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="15" selection-start="49" selection-end="49" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/DashboardController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="28" selection-start="95" selection-end="95" vertical-scroll-proportion="-3.6956522" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="35" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/caoknowsv3/SecurityFilters.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/caoknowsv3/UserController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="153" selection-end="153" vertical-scroll-proportion="-2.4871795" vertical-offset="1785" max-vertical-offset="2499">
+          <folding>
+            <element signature="e#22#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/caoknowsv3/GenerateOrderControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="44" selection-start="594" selection-end="594" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="748">
+          <folding>
+            <element signature="e#20#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/generateOrder/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="41" selection-start="78" selection-end="78" vertical-scroll-proportion="-0.41666666" vertical-offset="311" max-vertical-offset="935">
           <folding />
         </state>
       </provider>

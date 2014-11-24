@@ -1,4 +1,6 @@
-
+<%--
+Module 3.1 -- Display Generated Order
+--%>
 <%@ page import="caoknowsv3.Item" %>
 <!DOCTYPE html>
 <html>
@@ -51,7 +53,7 @@
 
                 <td>${fieldValue(bean: itemInstance, field: 'capacity')}</td>
 
-                <td><g:remoteField style="width:50px" type="number" action="updateOrder" name="orderQty" paramName="orderQty" value="${fieldValue(bean: itemInstance?.orderHistory, field:'pendingDeliveryQuantity')}" id="${itemInstance?.id}"></g:remoteField>
+                <td><g:remoteField style="width:50px" type="number" action="updateOrderQuantity" name="orderQty" paramName="orderQty" value="${fieldValue(bean: itemInstance?.orderHistory, field:'pendingDeliveryQuantity')}" id="${itemInstance?.id}"></g:remoteField>
 
             </tr>
         </g:each>

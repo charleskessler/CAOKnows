@@ -1,4 +1,6 @@
-
+<%--
+Module 3.0 -- Order Review
+--%>
 <%@ page import="caoknowsv3.OrderBook" %>
 <!DOCTYPE html>
 <html>
@@ -32,7 +34,7 @@
         <g:each in="${orderBookInstanceList}" status="i" var="orderBookInstance">
             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-                <td><g:link controller="GenerateOrder" action="generate" params='["bookNumber":"${fieldValue(bean: orderBookInstance, field: "bookNumber")}"]'>${fieldValue(bean: orderBookInstance, field: "bookNumber")}</g:link></td>
+                <td><g:link controller="GenerateOrder" action="generateOrder" params='["bookNumber":"${fieldValue(bean: orderBookInstance, field: "bookNumber")}"]'>${fieldValue(bean: orderBookInstance, field: "bookNumber")}</g:link></td>
 
                 <td>${fieldValue(bean: orderBookInstance, field: "description")}</td>
             </tr>
