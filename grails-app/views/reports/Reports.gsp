@@ -1,8 +1,5 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: vice
-  Date: 10/1/14
-  Time: 11:25 PM
+Module 6.0 -- Reports
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>

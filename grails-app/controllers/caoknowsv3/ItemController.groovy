@@ -35,8 +35,16 @@ class ItemController {
     }
 
     def create() {
-        println("NEW ITEM CREATED: " + params)
-        respond new Item(params)
+        Item itemInstance = new Item(params)
+        itemInstance.location = new ItemLocation(item:itemInstance, aisle:0, side:"", segment:0, shelf:0, position:0)
+        itemInstance.inventory = new ItemInventory(item:itemInstance, shelf:0, backroom:0, mezzanine:0, minimumLevel:0)
+        itemInstance.capacity = new ItemCapacity(item:itemInstance, facings:0, depth:0, height:1, secondary:0)
+        itemInstance.orderHistory = new OrderHistory(pendingDeliveryQuantity: 0, pendingDeliveryDate: new Date(),
+                                                    lastOrderQuantity: 0, lastOrderReceived: 0, lastReceivedQuantity: 0,
+                                                    lastReceivedDate: new Date(), item: itemInstance)
+        itemInstance.createdBy = session.user
+
+        respond itemInstance
     }
 
     @Transactional
@@ -51,35 +59,7 @@ class ItemController {
             return
         }
 
-        // check if these fields were filled in on creation, if not create new ones
-        if(itemInstance.location == null) {
-            itemInstance.location = new ItemLocation(item:itemInstance,
-                    aisle:0, side:"", segment:0, shelf:0, position:0)
-        }
-        if(itemInstance.inventory == null) {
-            itemInstance.inventory = new ItemInventory(item:itemInstance,
-                    shelf:0, backroom:0, mezzanine:0, minimumLevel:0)
-        }
-        if(itemInstance.capacity == null) {
-            itemInstance.capacity = new ItemCapacity(item:itemInstance,
-                    facings:0, depth:0, height:1, secondary:0)
-        }
-        if(itemInstance.orderHistory == null) {
-            itemInstance.orderHistory = new OrderHistory(pendingDeliveryQuantity: 0,
-                    pendingDeliveryDate: new Date(),
-                    lastOrderQuantity: 0,
-                    lastOrderReceived: 0,
-                    lastReceivedQuantity: 0,
-                    lastReceivedDate: new Date(),
-                    item: itemInstance)
-        }
-        if (itemInstance.createdBy == null) {
-            itemInstance.createdBy = session.user
-        }
-
         itemInstance.lastUpdatedBy = session.user
-
-
 
         itemInstance.save flush:true
 
@@ -133,7 +113,9 @@ class ItemController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Item.label', default: 'Item'), itemInstance.id])
-                redirect action:"index", method:"GET"
+                def bookNumber = itemInstance.orderBook.bookNumber
+                redirect action:"index", params:[bookNum:bookNumber]
+
             }
             '*'{ render status: NO_CONTENT }
         }
@@ -152,9 +134,7 @@ class ItemController {
     def search = {
         if(params.query) {
             def items = Item.search(params.query).results
-            [items:items]
-            /*
-            println(items.size())
+
             if(items.size() == 1) { //only 1 item returned, go right to it
                 def item = items[0]
                 def id = ((Item)item).id
@@ -162,7 +142,7 @@ class ItemController {
             }
             else {
                 [items:items]
-            }*/
+            }
         }
     }
 }

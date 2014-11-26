@@ -17,6 +17,11 @@
 </div>
 <div id="list-item" class="content scaffold-list" role="main">
     <h1>Book ${params.bookNumber} Order Summary</h1>
+    <ol>
+        <h3>Total Items: ${params.itemCount}</h3><br>
+        <h3>Total Cases: ${params.finalCount}</h3><br>
+        <h3>Override Quantity: ${(params.finalCount.toInteger() - params.caseTotal.toInteger()).abs()}</h3><br>
+    </ol>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>

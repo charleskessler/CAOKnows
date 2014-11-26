@@ -14,7 +14,7 @@
 <div id="list-items" class="content scaffold-list" role="main">
     <h1>Search Results</h1>
     <br />
-    <ol class="property-list tekEvent">
+    <ol class="property-list item">
         <g:if test="${items}">
             <g:each in="${items}" var="item">
                 <li>

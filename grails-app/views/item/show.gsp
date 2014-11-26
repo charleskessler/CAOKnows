@@ -13,9 +13,7 @@
     <ul>
         <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index" params='["bookNum":"${itemInstance.orderBook.bookNumber}"]'>Item List</g:link></li>
-        <g:isManager>
-            <li><g:link class="create" action="create" params='["bookNum":"${itemInstance.orderBook.bookNumber}"]'>New Item</g:link></li>
-        </g:isManager>
+
     </ul>
 </div>
 <div id="show-item" class="content scaffold-show" role="main">

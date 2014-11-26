@@ -9,13 +9,12 @@ class AccountSettingsController {
     def changePassword() {
 
         def user = session.user
-        println("curr=" + user.password)
-        println("old=" + params.oldPassword)
+
         if(params.oldPassword == user.password) {
             user.password = params.newPassword
 
             flash.message = "Password Successfully Changed"
-            render view:'Settings'
+            redirect controller:'Dashboard', view:'index'
             return
         } else {
             flash.message = "Incorrect Password"

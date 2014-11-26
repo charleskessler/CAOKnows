@@ -34,5 +34,32 @@ class GenerateOrderControllerSpec extends Specification {
             returnedParams == null
     }
 
+    void "Unit Test 4.0-2 -- Invalid Book Number Parameter"() {
+        when: "the generateOrder order action is executed with an invalid book number parameter"
+            params.bookNumber = '-1'
+            def returnedParams = controller.generateOrder()
+
+        then: "the generateOrder order action returns an empty list"
+            returnedParams == null
+    }
+
+    void "Unit Test 5.0-1 -- No Book Number Parameter"() {
+        when: "the generateOrder order action is executed with no book number parameter"
+            def returnedParams = controller.completeOrder()
+
+        then: "the generateOrder order action returns an empty list"
+            returnedParams == null
+    }
+
+    void "Unit Test 5.0-2 -- Invalid Book Number Parameter"() {
+        when: "the generateOrder order action is executed with an invalid book number parameter"
+            params.bookNumber = '-1'
+            def returnedParams = controller.completeOrder()
+
+        then: "the generateOrder order action returns an empty list"
+            returnedParams == null
+    }
+
+
 
 }

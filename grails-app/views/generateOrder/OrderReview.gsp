@@ -19,7 +19,11 @@ Module 3.1 -- Display Generated Order
 </div>
 <div id="list-item" class="content scaffold-list" role="main">
     <h1>Book ${params.bookNumber} Order Review</h1>
-    <g:if test="${flash.message}">
+    <ol>
+        <h3>Total Items: ${itemInstanceList.size()}</h3><br>
+        <h3>Total Cases: ${params.caseTotal}</h3><br>
+    </ol>
+   <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
     <table>
@@ -32,11 +36,11 @@ Module 3.1 -- Display Generated Order
 
             <g:sortableColumn property="casePack" title="${message(code: 'item.casePack.label', default: 'Pack Size')}" />
 
-            <g:sortableColumn property="casePack" title="${message(code: 'item.inventory.label', default: 'On Hand Units')}" />
+            <g:sortableColumn property="onHand" title="${message(code: 'item.inventory.label', default: 'On Hand Units')}" />
 
-            <g:sortableColumn property="casePack" title="${message(code: 'item.inventory.label', default: 'Shelf Cap')}" />
+            <g:sortableColumn property="capacity" title="${message(code: 'item.inventory.label', default: 'Shelf Cap')}" />
 
-            <g:sortableColumn property="casePack" title="${message(code: 'item.order.label', default: 'Order Qty')}" style="width: 75px"  />
+            <g:sortableColumn property="orderQty" title="${message(code: 'item.order.label', default: 'Order Qty')}" style="width: 75px"  />
         </tr>
         </thead>
         <tbody>
@@ -61,7 +65,8 @@ Module 3.1 -- Display Generated Order
     </table>
 </div>
 <fieldset class="buttons">
-        <g:link class="edit" action="completeOrder" params="[bookNumber:"${params.bookNumber}"]">Complete Order</g:link>
+        <g:link class="edit" action="completeOrder" params="[bookNumber:"${params.bookNumber}", itemCount:"${itemInstanceList.size()}", caseTotal:"${params.caseTotal}"]">Complete Order</g:link>
+
 </fieldset>
 </body>
 </html>

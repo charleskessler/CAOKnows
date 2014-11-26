@@ -8,6 +8,10 @@ Module 2.0 -- Dashboard
 		<title>CAO Knows</title>
 	</head>
 	<body>
+    <g:if test="${flash.message}">
+        <div class="message" role="status">${flash.message}</div>
+    </g:if>
+    <ol>
         <div class="homeCell">
             <div id="homeSearch">
                 <h3>Item Search</h3> <br>
@@ -44,5 +48,6 @@ Module 2.0 -- Dashboard
                 </span>
             </g:isManager>
         </div>
+    </ol>
 	</body>
 </html>

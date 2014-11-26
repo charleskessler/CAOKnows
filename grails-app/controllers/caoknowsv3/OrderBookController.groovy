@@ -20,6 +20,9 @@ class OrderBookController {
     }
 
     def create() {
+        OrderBook orderBookInstance = new OrderBook(params)
+        orderBookInstance.createdBy = session.user
+
         respond new OrderBook(params)
     }
 
@@ -35,9 +38,6 @@ class OrderBookController {
             return
         }
 
-        if (orderBookInstance.createdBy == null) {
-            orderBookInstance.createdBy = session.user
-        }
 
         orderBookInstance.lastUpdatedBy = session.user
 

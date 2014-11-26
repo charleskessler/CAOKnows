@@ -14,8 +14,7 @@
         <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index">All Order Books</g:link></li>
         <g:isManager>
-            <li><g:link class="Item" action="create" params='["bookNum":"${orderBookInstance?.bookNumber}"]'><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-
+            <li><g:link class="create" controller="item" action="create" params='["bookNum":"${orderBookInstance?.bookNumber}"]'>New Item</g:link></li>
         </g:isManager>
     </ul>
 </div>
