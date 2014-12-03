@@ -16,49 +16,48 @@ class ReportsControllerSpec extends Specification {
     def cleanup() {
     }
 
-    void "Unit Test 7.1-1"() {
+    void "Unit Test 7.1-1 -- No Location Report Type"() {
 
         when: "The module is called"
             controller.noLocation()
 
-        then: "it returns a list to the reports view"
-            controller == 'list'
-
+        then: "it returns the correct report type"
+            controller.params.type == "Items With No Location"
     }
 
-    void "Unit Test 7.2-1"() {
+    void "Unit Test 7.2-1 -- Backroom Pull Report Type"() {
 
         when: "The module is called"
-            controller.backroomPull()
+            def response = controller.backroomPull()
 
-        then: "it returns a list to the reports view"
-        response.redirectedUrl == '/reports/list'
+        then: "it returns the correct report type"
+            controller.params.type == "Backroom Pull"
     }
 
-    void "Unit Test 7.3-1"() {
+    void "Unit Test 7.3-1 -- Negative Inventory Report Type"() {
 
         when: "The module is called"
-            controller.negativeInventory()
+            def response = controller.negativeInventory()
 
-        then: "it returns a list to the reports view"
-            response.redirectedUrl == '/reports/list'
+        then: "it returns the correct report type"
+            controller.params.type == "Negative Inventory"
     }
 
-    void "Unit Test 7.4-1"() {
+    void "Unit Test 7.4-1 -- Backroom Inventory Report Type"() {
 
         when: "The module is called"
-            controller.backroomInventory()
+        def response = controller.backroomInventory()
 
-        then: "it returns a list to the reports view"
-            response.redirectedUrl == '/reports/list'
+        then: "it returns the correct report type"
+            controller.params.type == "Backroom Inventory"
     }
 
-    void "Unit Test 7.5-1"() {
+    void "Unit Test 7.5-1 -- Discontinued Items Report Type"() {
 
         when: "The module is called"
-            controller.discontinuedItems()
+            def response = controller.discontinuedItems()
 
-        then: "it returns a list to the reports view"
-            response.redirectedUrl == '/reports/list'
+        then: "it returns the correct report type"
+            controller.params.type == "Discontinued Items"
     }
 }

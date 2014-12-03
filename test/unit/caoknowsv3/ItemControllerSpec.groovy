@@ -6,7 +6,7 @@ import grails.test.mixin.*
 import spock.lang.*
 
 @TestFor(ItemController)
-@Mock(Item)
+@Mock([Item, OrderBook, OrderHistory, ItemLocation, ItemCapacity, ItemInventory, OrderHistory, User])
 class ItemControllerSpec extends Specification {
 
     def populateValidParams(params) {
@@ -32,7 +32,7 @@ class ItemControllerSpec extends Specification {
         model.itemInstanceCount == 0
     }
 
-    void "Test the create action returns the correct model"() {
+    void "13.9-1 -- Test the create action returns the correct model"() {
         when: "The create action is executed"
         controller.create()
 
@@ -40,7 +40,7 @@ class ItemControllerSpec extends Specification {
         model.itemInstance != null
     }
 
-    void "Test the save action correctly persists an instance"() {
+    void "13.10-1 -- Test the save action correctly persists an instance"() {
 
         when: "The save action is executed with an invalid instance"
         request.contentType = FORM_CONTENT_TYPE
@@ -65,7 +65,21 @@ class ItemControllerSpec extends Specification {
         Item.count() == 1
     }
 
-    void "Test that the show action returns the correct model"() {
+    void "23.2-1 -- Item search returns one result"() {
+
+        when: "the item search action is executed, and one result is found"
+            def item = new Item(params)
+            controller.save(item)
+
+            params.query = '1234567'
+            controller.search()
+
+        then: "the controller redirects to that item"
+            response.redirectedUrl == '/item/show/1'
+            Item.count() == 1
+    }
+
+    void "15.0-2 -- Test that the show action returns the correct model"() {
         when: "The show action is executed with a null domain"
         controller.show(null)
 
@@ -81,7 +95,7 @@ class ItemControllerSpec extends Specification {
         model.itemInstance == item
     }
 
-    void "Test that the edit action returns the correct model"() {
+    void "14.0-2 -- Test that the edit action returns the correct model"() {
         when: "The edit action is executed with a null domain"
         controller.edit(null)
 
@@ -128,7 +142,7 @@ class ItemControllerSpec extends Specification {
         flash.message != null
     }
 
-    void "Test that the delete action deletes an instance if it exists"() {
+    void "15.3.1-1 -- Test that the delete action deletes an instance if it exists"() {
         when: "The delete action is called for a null instance"
         request.contentType = FORM_CONTENT_TYPE
         controller.delete(null)

@@ -15,6 +15,7 @@ class UserControllerSpec extends Specification {
         //params["name"] = 'someValidName'
         params["userName"] = 'someUserName'
         params["password"] = 'somePassword'
+        params["rights"] = 'Manager'
 
     }
 
@@ -95,22 +96,21 @@ class UserControllerSpec extends Specification {
             response.redirectedUrl == '/someClassName/someActionName'
     }
 
-    void "Unit Test 29.0-1 -- Redirects to Login page"() {
-
-        when: "User clicks on Logout link"
-            controller.logout()
-        then: "the logout action redirects to /User/Login"
-            response.redirectedUrl == '/user/login'
-    }
-
-    void "Unit Test 29.0-2 -- User is logged out"() {
+    void "Unit Test 29.0-1 -- User is logged out"() {
         when: "User clicks on Logout link"
             controller.logout()
         then: "the user session is ended"
             session.user == null
     }
 
-/*
+    void "Unit Test 29.0-2 -- Redirects to Login page"() {
+
+        when: "User clicks on Logout link"
+        controller.logout()
+        then: "the logout action redirects to /User/Login"
+        response.redirectedUrl == '/user/login'
+    }
+
     void "Test the index action returns the correct model"() {
 
         when: "The index action is executed"
@@ -129,7 +129,7 @@ class UserControllerSpec extends Specification {
         model.userInstance != null
     }
 
-    void "Test the save action correctly persists an instance"() {
+    void "26.4-1 -- Test the save action correctly persists an instance"() {
 
         when: "The save action is executed with an invalid instance"
         request.contentType = FORM_CONTENT_TYPE
@@ -154,7 +154,7 @@ class UserControllerSpec extends Specification {
         User.count() == 1
     }
 
-    void "Test that the show action returns the correct model"() {
+    void "28.0-2 -- Test that the show action returns the correct model"() {
         when: "The show action is executed with a null domain"
         controller.show(null)
 
@@ -170,7 +170,7 @@ class UserControllerSpec extends Specification {
         model.userInstance == user
     }
 
-    void "Test that the edit action returns the correct model"() {
+    void "26.0-2 -- Test that the edit action returns the correct model"() {
         when: "The edit action is executed with a null domain"
         controller.edit(null)
 
@@ -217,7 +217,7 @@ class UserControllerSpec extends Specification {
         flash.message != null
     }
 
-    void "Test that the delete action deletes an instance if it exists"() {
+    void "28.3-1 -- Test that the delete action deletes an instance if it exists"() {
         when: "The delete action is called for a null instance"
         request.contentType = FORM_CONTENT_TYPE
         controller.delete(null)
@@ -243,5 +243,5 @@ class UserControllerSpec extends Specification {
         flash.message != null
     }
 
-    */
+
 }

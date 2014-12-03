@@ -21,6 +21,5 @@ class AccountSettingsController {
             render view:'Settings'
             return
         }
-
     }
 }

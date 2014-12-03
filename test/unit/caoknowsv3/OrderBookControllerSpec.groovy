@@ -13,6 +13,9 @@ class OrderBookControllerSpec extends Specification {
         assert params != null
         // TODO: Populate valid properties like...
         //params["name"] = 'someValidName'
+
+        params["bookNumber"] = '1'
+        params["description"] = 'someDescription'
     }
 
     void "Test the index action returns the correct model"() {
@@ -25,15 +28,15 @@ class OrderBookControllerSpec extends Specification {
         model.orderBookInstanceCount == 0
     }
 
-    void "Test the create action returns the correct model"() {
+    void "10.3-1 -- Test the create action returns the correct model"() {
         when: "The create action is executed"
-        controller.create()
+            controller.create()
 
         then: "The model is correctly created"
-        model.orderBookInstance != null
+            model.orderBookInstance != null
     }
 
-    void "Test the save action correctly persists an instance"() {
+    void "10.4-1 -- Test the save action correctly persists an instance"() {
 
         when: "The save action is executed with an invalid instance"
         request.contentType = FORM_CONTENT_TYPE
@@ -58,7 +61,7 @@ class OrderBookControllerSpec extends Specification {
         OrderBook.count() == 1
     }
 
-    void "Test that the show action returns the correct model"() {
+    void "12.0-2 -- Test that the show action returns the correct model"() {
         when: "The show action is executed with a null domain"
         controller.show(null)
 
@@ -74,7 +77,7 @@ class OrderBookControllerSpec extends Specification {
         model.orderBookInstance == orderBook
     }
 
-    void "Test that the edit action returns the correct model"() {
+    void "11.0-2 -- Test that the edit action returns the correct model"() {
         when: "The edit action is executed with a null domain"
         controller.edit(null)
 
@@ -121,7 +124,7 @@ class OrderBookControllerSpec extends Specification {
         flash.message != null
     }
 
-    void "Test that the delete action deletes an instance if it exists"() {
+    void "12.5.1-1 -- Test that the delete action deletes an instance if it exists"() {
         when: "The delete action is called for a null instance"
         request.contentType = FORM_CONTENT_TYPE
         controller.delete(null)

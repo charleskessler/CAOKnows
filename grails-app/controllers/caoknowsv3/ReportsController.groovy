@@ -18,7 +18,8 @@ class ReportsController {
         list.each() { itemList.add(it.getItem()) }
         params.type = "Items With No Location"
 
-        respond itemList, model:[itemInstanceCount:count], view:"List"
+        render view:"List", model:[itemInstanceList:itemList, itemInstanceCount:count]
+        //respond itemList, model:[itemInstanceCount:count], view:"List"
     }
 
 //Module 7.2 -- Backroom pull list
@@ -31,7 +32,8 @@ class ReportsController {
         inventoryList.each() { itemList.add(it.getItem()) }
         params.type = "Backroom Pull"
 
-        respond itemList, model:[itemInstanceCount:count], view:"List"
+        render view:"List", model:[itemInstanceList:itemList, itemInstanceCount:count]
+        //respond itemList, model:[itemInstanceCount:count], view:"List"
     }
 
 
@@ -45,7 +47,8 @@ class ReportsController {
             inventoryList.each() { itemList.add(it.getItem()) }
             params.type = "Negative Inventory"
 
-            respond itemList, model:[itemInstanceCount:count], view:"List", type:"Negative Inventory"
+            render view:"List", model:[itemInstanceList:itemList, itemInstanceCount:count]
+            //respond itemList, model:[itemInstanceCount:count], view:"List", type:"Negative Inventory"
         }
 
 
@@ -59,7 +62,8 @@ class ReportsController {
         inventoryList.each() { itemList.add(it.getItem()) }
         params.type = "Backroom Inventory"
 
-        respond itemList, model:[itemInstanceCount:count], view:"List"
+        render view:"List", model:[itemInstanceList:itemList, itemInstanceCount:count]
+        //respond itemList, model:[itemInstanceCount:count], view:"List"
     }
 
 
@@ -75,6 +79,7 @@ class ReportsController {
         def count = discoList.size()
         params.type = "Discontinued Items"
 
-        respond discoList, model:[itemInstanceCount:count], view:"List"
+        render view:"List", model:[itemInstanceList:itemList, itemInstanceCount:count]
+        //respond discoList, model:[itemInstanceCount:count], view:"List"
     }
 }

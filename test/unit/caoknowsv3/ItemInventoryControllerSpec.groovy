@@ -33,7 +33,7 @@ class ItemInventoryControllerSpec extends Specification {
         model.itemInventoryInstance != null
     }
 
-    void "Test the save action correctly persists an instance"() {
+    void "21.4-1 -- Test the save action correctly persists an instance"() {
 
         when: "The save action is executed with an invalid instance"
         request.contentType = FORM_CONTENT_TYPE
@@ -58,7 +58,7 @@ class ItemInventoryControllerSpec extends Specification {
         ItemInventory.count() == 1
     }
 
-    void "Test that the show action returns the correct model"() {
+    void "22.0-2 -- Test that the show action returns the correct model"() {
         when: "The show action is executed with a null domain"
         controller.show(null)
 
@@ -74,7 +74,7 @@ class ItemInventoryControllerSpec extends Specification {
         model.itemInventoryInstance == itemInventory
     }
 
-    void "Test that the edit action returns the correct model"() {
+    void "21.0-2 -- Test that the edit action returns the correct model"() {
         when: "The edit action is executed with a null domain"
         controller.edit(null)
 

@@ -33,7 +33,7 @@ class ItemCapacityControllerSpec extends Specification {
         model.itemCapacityInstance != null
     }
 
-    void "Test the save action correctly persists an instance"() {
+    void "19.6-1 -- Test the save action correctly persists an instance"() {
 
         when: "The save action is executed with an invalid instance"
         request.contentType = FORM_CONTENT_TYPE
@@ -58,7 +58,7 @@ class ItemCapacityControllerSpec extends Specification {
         ItemCapacity.count() == 1
     }
 
-    void "Test that the show action returns the correct model"() {
+    void "20.0-1 -- Test that the show action returns the correct model"() {
         when: "The show action is executed with a null domain"
         controller.show(null)
 
@@ -74,7 +74,7 @@ class ItemCapacityControllerSpec extends Specification {
         model.itemCapacityInstance == itemCapacity
     }
 
-    void "Test that the edit action returns the correct model"() {
+    void "19.0-2 -- Test that the edit action returns the correct model"() {
         when: "The edit action is executed with a null domain"
         controller.edit(null)
 

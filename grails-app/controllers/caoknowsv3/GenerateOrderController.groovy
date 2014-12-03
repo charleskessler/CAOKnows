@@ -22,25 +22,29 @@ class GenerateOrderController {
 
             if (list) {
                 list.each() {
-                    def onHand =  it.inventory.onHandInventory()
-                    def min = it.inventory.minimumLevel
-                    def order = it.orderHistory
 
-                    if (onHand <= min || onHand <= 0)
-                    {
-                        int orderQuantity = 0
-                        if(it.casePack != null && it.casePack > 0)
-                            orderQuantity = (it.capacity.shelfCapacity() - onHand) / it.casePack
-                        else if(it.casePack == null || it.casePack <= 0)
-                            orderQuantity = (it.capacity.shelfCapacity() - onHand)
-                        order.pendingDeliveryQuantity = orderQuantity
-                        order.pendingDeliveryDate = new Date() //today
-                        itemList.add(it)
-                        caseTotal += orderQuantity
-                    }
-                    else {
-                        order.pendingDeliveryQuantity = 0
-                    }
+                    println(it.id)
+                   // if(it.inventory && it.orderHistory) {
+                        def onHand =  it.inventory.onHandInventory()
+                        def min = it.inventory.minimumLevel
+                        def order = it.orderHistory
+
+                        if (onHand <= min || onHand <= 0)
+                        {
+                            int orderQuantity = 0
+                            if(it.casePack != null && it.casePack > 0)
+                                orderQuantity = (it.capacity.shelfCapacity() - onHand) / it.casePack
+                            else if(it.casePack == null || it.casePack <= 0)
+                                orderQuantity = (it.capacity.shelfCapacity() - onHand)
+                            order.pendingDeliveryQuantity = orderQuantity
+                            order.pendingDeliveryDate = new Date() //today
+                            itemList.add(it)
+                            caseTotal += orderQuantity
+                        }
+                        else {
+                            order.pendingDeliveryQuantity = 0
+                        }
+                 //   }
                 }
             } else {
                 flash.message = 'Invalid book number'

@@ -12,7 +12,11 @@ class ItemCapacity {
     static belongsTo = [item:Item]
 
     String toString() {
-        "${(facings * (depth * height)) + secondary}"
+
+        if(shelfCapacity() > 0)
+            return shelfCapacity()
+        else
+            return "Set Capacity"
     }
 
     int shelfCapacity() {
